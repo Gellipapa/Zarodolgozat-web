@@ -1,0 +1,94 @@
+.carousel-caption {
+    top: 25%;
+    bottom: auto;  
+}
+
+
+img{
+  width:30px;
+}
+
+h5{
+    font-size: 60px;
+}
+
+.btn-primary {
+  background-color: #808080!important;
+  border: none;
+  color: white;
+  padding: 12px 30px !important;
+  font-size: 16px !important;
+  cursor: pointer;
+  margin:5px;
+  border-radius:0px !important;
+}
+
+.btn-primary:hover{
+  background-color:#808080 !important;
+}
+
+.kereso{
+  
+  border-radius:0px !important;
+  
+}
+
+.kek{
+  background-color:#808080;
+  border-radius:0px !important;
+}
+
+.btn-secondary{
+  border:none;
+
+}
+
+.btn-secondary:hover{
+  background-color:#ff9000;
+}
+
+#navbarDropdown{
+  background-color:#808080;
+  color:white;
+  height:48px;
+  margin:2px;
+  font-size:25px;
+  text-align:center !important;
+}
+
+#navbarDropdown>a{
+  text-align: center;
+}
+
+#navbarDropdown:hover,.btn-primary:hover{
+  background-color:#ff9000 !important;
+}
+
+.dropdown-toggle::after { 
+            content: none; 
+        }
+
+.navbar-nav > li > .dropdown-menu {     
+  background-color: #808080;
+  border-radius:0px !important;
+  }
+
+  .navbar-nav > li > .dropdown-menu a{   
+    color: white;  
+    }
+
+
+
+
+  .navbar-nav>li>.dropdown-menu a:hover{
+    background: #ff9000 !important;
+}
+
+.navbar-nav>li:active>.dropdown-menu a:active{
+    background: #ff9000 !important;
+}
+
+
+footer{
+  color:white;
+}
