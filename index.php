@@ -12,5 +12,5 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-  </bod>
+  </body>
 </html>
