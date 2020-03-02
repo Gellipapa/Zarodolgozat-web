@@ -1,94 +1,94 @@
-.carousel-caption {
-    top: 25%;
-    bottom: auto;  
+/*narancs: #ff9000
+  szürke:#808080
+
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-img{
-  width:30px;
-}
-
-h5{
-    font-size: 60px;
-}
-
-.btn-primary {
-  background-color: #808080!important;
-  border: none;
-  color: white;
-  padding: 12px 30px !important;
-  font-size: 16px !important;
-  cursor: pointer;
-  margin:5px;
-  border-radius:0px !important;
-}
-
-.btn-primary:hover{
-  background-color:#808080 !important;
-}
-
-.kereso{
-  
-  border-radius:0px !important;
-  
-}
-
-.kek{
-  background-color:#808080;
-  border-radius:0px !important;
-}
-
-.btn-secondary{
-  border:none;
+.alapvaz{
+  height: 100vh;
+  display: grid;
+  grid-template-rows:10% auto 10%;
+  grid-template-areas: 
+  "fejlec"
+  "tartalom"
+  "tartalom"
+  "tartalom"
+  "tartalom"
+  "tartalom"
+  "lablec"  
+  ;
 
 }
 
-.btn-secondary:hover{
-  background-color:#ff9000;
+.fejlec{
+  grid-area: fejlec;
+  background-color: #343a40;
 }
 
-#navbarDropdown{
-  background-color:#808080;
-  color:white;
-  height:48px;
-  margin:2px;
-  font-size:25px;
-  text-align:center !important;
+.tartalom{
+  grid-area: tartalom;
 }
 
-#navbarDropdown>a{
+.lablec{
+  grid-area: lablec;
+  background-color: #343a40;
+}
+
+.fejlec ul{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+list-style: none;}
+
+.fejlec li{
+  padding: 15px 20px;
+  margin:3px;
+  border-radius: 5px;
+}
+
+#foldal{
+  background-color: aqua;
+}
+
+#informacio{
+  background-color: brown;
+}
+
+.lablec p{
+  margin-top:50px;
   text-align: center;
 }
 
-#navbarDropdown:hover,.btn-primary:hover{
-  background-color:#ff9000 !important;
+.lablec ul{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+
+
+list-style: none;
+
 }
 
-.dropdown-toggle::after { 
-            content: none; 
-        }
-
-.navbar-nav > li > .dropdown-menu {     
-  background-color: #808080;
-  border-radius:0px !important;
-  }
-
-  .navbar-nav > li > .dropdown-menu a{   
-    color: white;  
-    }
-
-
-
-
-  .navbar-nav>li>.dropdown-menu a:hover{
-    background: #ff9000 !important;
+.lablec li{
+  margin: 8px;
 }
 
-.navbar-nav>li:active>.dropdown-menu a:active{
-    background: #ff9000 !important;
+.lablec p{
+  margin-bottom: 10px;
+}
+
+.tartalom{
+  background-color: red;
+}
+
+.tartalom img{
+  width: 100%;
+  height: auto;
 }
 
 
-footer{
-  color:white;
-}
