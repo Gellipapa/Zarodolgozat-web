@@ -7,19 +7,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color:white;
+  color:black;
 }
 
 .alapvaz{
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows:10% auto 10%;
+  grid-template-rows:60px auto 120px;
   grid-template-areas: 
   "fejlec"
-  "tartalom"
-  "tartalom"
-  "tartalom"
-  "tartalom"
   "tartalom"
   "lablec"  
   ;
@@ -41,17 +37,15 @@
 }
 
 .fejlec ul{
-  margin-top:15px;
   display: flex;
   flex-flow:row wrap;
   justify-content: flex-end;
-  justify-items: center;
+  align-items: center;
 list-style: none;}
 
 .fejlec li{
   padding: 15px 20px;
-  margin:3px;
-  border-radius: 5px;
+  
 }
 
 #foldal{
@@ -71,10 +65,7 @@ list-style: none;}
   display: flex;
   flex-flow:row wrap;
   justify-content: center;
-
-
-list-style: none;
-
+  list-style: none;
 }
 
 .lablec li{
@@ -88,42 +79,149 @@ list-style: none;
 }
 
 .tartalom{
-  background-color: red;
+  background-color: chocolate;
 }
 
 .tartalom img{
   width: 100%;
   height: auto;
 }
-
-@media screen and (min-width:800px){
-.fejlec ul{
-  padding: 5px 5px;
-  margin:-15px;
+.flex-item{
+  background-color: gray;
 }
 
 
-@media (min-width: 900px) and (max-width: 1024px) {
-  
-  .fejlec li{
-    padding: 5px 10px;
-  }
-  
+
+.fejlec ul li i{
+  font-size:20px;
+  color:white;
 }
 
-.fejlec ul{
-  margin-right:10px;
-}
+
+  /*background-color: #31ff83; zöld*/
+
+
+
+@media only screen and (min-width:320px){
 
   .fejlec li{
-    padding: 20px 30px;
-    margin-top:22px;
-    border-radius: 5px;
+    margin:5px;
   }
 
-  .fejlec ul img{
-    width:20px;
+#kat1{
+  display: none;
+}
+
+#kereso_doboz{
+  display: none;
+}
+
+.flex-item{ order: 1; }
+
+#logo_szoveg{
+  display: none;
+}
+
+
+}
+@media only screen and (min-width:600px){
+
+  .flex-item{ order: 0; }
+
+#kat{
+  display: none;
+}
+
+#kat1{
+  display: inline-block;
+  background-color: gray;
+  padding-right: 70px;
+
+}
+  .fejlec li{
+    padding: 15px 20px;
+  }
+
+  #kereso_doboz{
+    display: inline-block;
+    padding:0;
+    border:0;
+    height: 51px;
+    font-size: 20px;
+    color: black;
+  }
+  #kereso{
+    background-color: gray;
+    display: inline-block;
+    margin-left: 0;
+  }
+  #logo_szoveg{
+    display: none;
+  }
+
+  
+
+}
+
+@media only screen and (min-width:876px){
+
+  .flex-item{ order: 0; }
+
+
+  #kereso{
+    background-color: gray;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  #kereso_doboz{
+    display: inline-block;
+    font-size: 20px;
+    color: black;
+    padding:0;
+    border:0;
+    height: 51px;
+    width: 450px;
+  }
+
+  #logo_szoveg{
+    position: relative;
+    right: 60px;
+    color:chocolate;
+    display: inline;
   }
 }
 
+.flex-item:hover,#kat1:hover,#kereso:hover{
+  background-color: chocolate;
+}
+
+#logo{
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left:10px;
+}
+
+#logo_szoveg{
+  position: relative;
+  right: 60px;
+  color:chocolate;
+}
+
+.lablec ul li i{
+  color: chocolate;
+  font-size: 25px;
+  font-weight: 0;
+}
+
+.lablec p{
+  color:white;
+  font-size: 20px;
+}
+
+#kat1{
+  font-weight: bold;
+}
 
