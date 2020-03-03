@@ -41,9 +41,11 @@
 }
 
 .fejlec ul{
+  margin-top:15px;
   display: flex;
   flex-flow:row wrap;
   justify-content: flex-end;
+  justify-items: center;
 list-style: none;}
 
 .fejlec li{
@@ -92,6 +94,36 @@ list-style: none;
 .tartalom img{
   width: 100%;
   height: auto;
+}
+
+@media screen and (min-width:800px){
+.fejlec ul{
+  padding: 5px 5px;
+  margin:-15px;
+}
+
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  
+  .fejlec li{
+    padding: 5px 10px;
+  }
+  
+}
+
+.fejlec ul{
+  margin-right:10px;
+}
+
+  .fejlec li{
+    padding: 20px 30px;
+    margin-top:22px;
+    border-radius: 5px;
+  }
+
+  .fejlec ul img{
+    width:20px;
+  }
 }
 
 
