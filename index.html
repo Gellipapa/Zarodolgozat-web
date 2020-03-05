@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -19,16 +21,132 @@
           
           <a href=""><li class="flex-item"><i class="fa fa-heart"></i></li></a>
           <a href=""><li class="flex-item"><i class="fa fa-info-circle"></i></li></a>
-          <a href=""><li class="flex-item"><i class="fa fa-male"></i></li></a>
+          <a href="#modal"><li class="flex-item login"><i class="fa fa-male"></i></li></a>
           <a href=""><li class="flex-item"><i class="fa fa-shopping-cart"></i></li></a>
           <a href=""><li id="kat" class="flex-item"><i class="fa fa-bars"></i></li></a>
         </ul>
       </div>
+      <script>
+        $( document ).ready(function() {
+
+          //Belépés modal window
+            $(".login").on('click',function(){
+              $(".modal").css("display","flex");
+            });
+            //Belépés ablak bezárás
+            $(".close").on('click',function(){
+              $(".modal").css("display","none");
+            });
+
+            ///Regisztráció
+            $(".reg_button").on('click',function(){
+              $(".modal").css("display","none");
+              $(".modal_reg").css("display","flex");
+              
+            });
+            //Reg ablak bezárás
+            $(".close_reg").on('click',function(){
+              $(".modal_reg").css("display","none");
+            });
+
+            //Regisztráció modalben vissza a bejelentkezésre
+            $("#login_back").on('click',function(){
+              $(".modal_reg").css("display","none");
+              $(".modal").css("display","flex");
+            });
+
+            //Loginról forgetbe
+            $(".forget_button").on('click',function(){
+              $(".modal").css("display","none");
+              $(".modal_forget_password").css("display","flex");
+            });
+
+            //Vissza LOGINra forgetből
+            $("#login_back_forget").on('click',function(){
+              $(".modal_forget_password").css("display","none");
+              $(".modal").css("display","flex");
+            });
+
+            $(".close_forget_password").on('click',function(){
+              $(".modal_forget_password").css("display","none");
+            });
+            
+
+
+
+
+
+        });
+   
+
+      
+      </script>
       
       <div class="tartalom">
         <img src="apple.jpg" alt="szamitogep kep">
         <img src="video2.jpg" alt="">
       </div>
+     
+<!-- Belépés modal ablak -->
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <div class="close">+</div>
+              <img src="s.png">
+              <h1 id="login_modal_text">Bejelentkezés</h1>
+              <form>
+                <input type="text" placeholder="Felhasználónév">
+                <input type="password" placeholder="Jelszó">
+                <a href="" class="button login_modal">Belépés</a>
+                <br>
+                <div class="linkek">
+                <a href="#modal_forget_password" class="forget_button">Elfelejtett jelszó?</a>
+                <a href="#modal_reg" class="reg_button">Regisztráció</a>
+              </div>
+              </form>
+            </div>
+          </div>
+
+<!-- Regisztrációs modal ablak -->
+          <div class="modal_reg" id="modal_reg">
+            <div class="modal-content_reg">
+              <div class="close_reg">+</div>
+              <img src="s.png">
+              <h1 id="reg_modal_text">Regisztráció</h1>
+              <form>
+                <input type="text" placeholder="Felhasználónév">
+                <input type="text" placeholder="Email cím">
+                <input type="password" placeholder="Jelszó">
+                <input type="password" placeholder="Jelszó mégegyszer">
+                <a href="" class="reg_modal">Regisztráció</a>
+                <br>
+                <div class="linkek">
+                <p>Regisztráltál már? Akkor jelenetkezz be itt<a href="#modal" id="login_back">Bejelentkezés</a></p>
+              </div>
+              </form>
+            </div>
+          </div>
+<!-- Elfelejtett jelszó modal ablak -->
+
+<div class="modal_forget_password" id="modal_forget_password">
+  <div class="modal-content_forget_password">
+    <div class="close_forget_password">+</div>
+    <img src="s.png">
+    <h1 id="forget_password_modal_text">Elfelejtett jelszó</h1>
+    <form>
+      <input type="text" placeholder="Email cím">
+      <a href="" class="forget_password_modal">Küldés</a>
+      <br>
+      <div class="linkek">
+      <p>Regisztráltál már? Akkor jelenetkezz be itt<a href="#modal" id="login_back_forget">Bejelentkezés</a></p>
+    </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
       <div class="lablec">
         <ul>
           <li><i class="fa fa-facebook"> </i></li>

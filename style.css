@@ -123,7 +123,46 @@ list-style: none;}
 }
 
 
+
+.close{
+  position: relative;
+  top:-28px;
+  left:220px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 50px;
 }
+.close_reg{
+  position: relative;
+  top:-28px;
+  left:220px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.close_forget_password{
+  position: relative;
+  top:-28px;
+  left:220px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.modal-content img{
+  width:30px;
+  position: relative;
+  bottom: 30px;
+}
+
+
+
+}
+
 @media only screen and (min-width:600px){
 
   .flex-item{ order: 0; }
@@ -185,24 +224,55 @@ list-style: none;}
   }
 
   #logo_szoveg{
-    position: relative;
+    position: absolute;
     right: 60px;
     color:chocolate;
     display: inline;
   }
+
+  .close{
+    position: relative;
+    top:-28px;
+    left:300px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-size: 50px;
+  }
+
+  .close_reg{
+    position: relative;
+    top:-28px;
+    left:300px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-size: 50px;
+  }
+
+  .modal-content img{
+    width:30px;
+    position: relative;
+    bottom: 50px;
+  }
+
+  .close_forget_password{
+    position: relative;
+    top:-28px;
+    left:280px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-size: 50px;
+  }
+
 }
 
 .flex-item:hover,#kat1:hover,#kereso:hover{
   background-color: chocolate;
 }
 
-#logo{
-  width: 30px;
-  display: inline-block;
-  position: absolute;
-  top:0;
-  left:10px;
-}
+
 
 #logo_szoveg{
   position: relative;
@@ -224,4 +294,216 @@ list-style: none;}
 #kat1{
   font-weight: bold;
 }
+#login_form{
+  width:20px;
+}
+
+#logo{
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top:5px;
+  left:10px;
+}
+
+/* Login Modal windows*/
+
+.modal{
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100%
+}
+
+.modal-content{
+  width: 650px;
+  height: 450px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+}
+
+.modal-content input{
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  font-size:20px;
+  border-radius: 40px;
+  outline: none;
+  padding: 10px;
+}
+
+
+.login_modal{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: green;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+form{
+  position: relative;
+  bottom:30px;
+}
+
+#login_modal_text{
+  position: relative;
+  bottom:50px;
+}
+
+.linkek{
+  margin-top: 30px;
+}
+.linkek a{
+  margin:10px;
+}
+
+/* Login Modal windows END*/
+
+/*Register Modal windows*/
+
+.modal_reg{
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100%;
+}
+
+.modal-content_reg{
+  width: 650px;
+  height: 600px;
+  position: relative;
+  top:30px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+}
+
+.modal-content_reg input{
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  font-size:20px;
+  border-radius: 40px;
+  outline: none;
+  padding: 10px;
+}
+
+
+.reg_modal{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: green;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+form{
+  position: relative;
+  bottom:30px;
+}
+
+#reg_modal_text{
+  position: relative;
+  bottom:30px;
+}
+
+.linkek{
+  margin-top: 30px;
+}
+.linkek a{
+  margin:10px;
+}
+
+.modal-content_reg img{
+  width:30px;
+  position: relative;
+  bottom: 30px;
+}
+
+/*Register Modal windows END*/
+
+/*Forget_password modal window*/
+
+.modal_forget_password{
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100%;
+  display: none;
+}
+
+.modal-content_forget_password{
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+}
+
+.modal-content_forget_password input{
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  font-size:20px;
+  border-radius: 40px;
+  outline: none;
+  padding: 10px;
+}
+
+
+.forget_password_modal{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: green;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+form{
+  position: relative;
+  bottom:30px;
+}
+
+#forget_password_modal_text{
+  position: relative;
+  bottom:30px;
+}
+
+.linkek{
+  margin-top: 30px;
+}
+.linkek a{
+  margin:10px;
+}
+
+.modal-content_forget_password img{
+  width:30px;
+  position: relative;
+  bottom: 30px;
+}
+
+/*Forget_password modal window END*/
 
