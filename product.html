@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Termékek</title>
+    <style>
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+}
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "side content content"
+    "footer footer footer";
+
+  grid-template-columns: 350px 1fr 200px;
+  grid-template-rows: 60px 1fr 60px;
+
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: #343a40;
+  width: 100%;
+}
+
+#kereso_doboz{
+    display: inline-block;
+    padding:0;
+    border:0;
+    height: 48px;
+    font-size: 20px;
+    color: black;
+  }
+
+aside {
+  grid-area: side;
+  background-color: orange;
+}
+
+
+main {
+  grid-area: content;
+  background-color: green;
+}
+
+
+
+footer {
+  grid-area: footer;
+  background-color: purple;
+}
+
+
+
+
+  /*Lista elemek style*/
+  header ul{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 100px;
+list-style: none;}
+/*
+header li{
+  padding: 15px 20px;
+  
+}
+*/
+.flex-item{
+    background-color: gray;
+    margin:5px;
+}
+.flex-item:hover,#kat1:hover,#kereso:hover{
+  background-color: chocolate;
+}
+
+#logo{
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top:5px;
+  left:10px;
+}
+
+footer p{
+  text-align: center;
+}
+
+footer ul{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+footer li{
+  margin: 8px;
+  color:white;
+  font-weight: bold;
+}
+
+footer p{
+  margin-bottom: 10px;
+}
+
+
+
+.name-tag,.find-search{
+    border:1px solid white;
+    font-size: 20px;
+}
+
+.find-search #float{
+    float:right;
+    margin-left:10px;
+}
+
+/* card kod*/
+.items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+.item {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 160px;
+  margin: 20px 15px;
+  border-radius: 15px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.item > .image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 100%;
+  height: 160px;
+}
+.item > .image > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.item > .name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.1em;
+  font-size: 1.2em;
+  min-height: 2.6em;
+  font-weight: bold;
+}
+.item > .price {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+.item > .cart {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+
+header ul #kat{
+      display: none;
+  }
+
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+      grid-template-areas:
+        "header"
+        "content"
+        "side"
+        "footer";
+  
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        auto /* Header */
+        1fr /* Content */
+        auto; /* Footer */
+        
+        
+    }
+
+   main .items {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+header li{
+  padding: 15px 20px;
+  
+}
+
+.item {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  margin: 20px 15px;
+  border-radius: 15px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+.item > .image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  margin-top: 5px;
+  width: 100%;
+  height: 160px;
+}
+
+    header ul{
+  display: flex;
+  flex-flow:row;
+list-style: none;}
+
+header ul #logo_szoveg{
+    display: none;
+}
+
+header ul #kat1{
+    display: none;
+}
+
+header ul #kereso_doboz{
+    display: none;
+}
+
+header ul #kat{
+      display: inline;
+  }
+
+
+    aside {
+      margin: 0;
+    }
+
+    #logo{
+  width:25px;
+  display: inline-block;
+  position: absolute;
+  top:0px;
+  left:10px;
+}
+  
+  
+  }
+
+  @media screen and(min-width: 481px) and (max-width: 767px) {
+    header ul li{
+        padding: 10px 15px;
+    }
+
+    #logo{
+        display: inline-block;
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    header ul li{
+        padding: 10px 15px;
+    }
+
+    #logo{
+        display: inline-block;
+        width: 25px;
+    }
+}
+
+ 
+
+.filter_header{
+      background-color: green;
+  }
+
+  .filter_body{
+      background-color: indianred;
+  }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+  <header>
+
+        <ul>
+          <a><img src="s.png" id="logo"><h1 id="logo_szoveg">Phoenix PC</h1></a>  
+          <a href=""><li  id="kat1" class="flex-item"><i class="fa fa-bars"> KATEGÓRIA</i></li></a>
+          <a><input type="text" id="kereso_doboz" placeholder=" Keresendő kifejezés"></a>
+          <a href=""><li id="kereso" class="flex-item"><i class="fa fa-search"></i></a></li></a>
+          
+          <a href=""><li class="flex-item"><i class="fa fa-heart"></i></li></a>
+          <a href=""><li class="flex-item"><i class="fa fa-info-circle"></i></li></a>
+          <a href="#modal"><li class="flex-item login"><i class="fa fa-male"></i></li></a>
+          <a href=""><li class="flex-item"><i class="fa fa-shopping-cart"></i></li></a>
+          <a href=""><li id="kat" class="flex-item"><i class="fa fa-bars"></i></li></a>
+        </ul>
+  </header>
+
+  <main>
+    <div class="name-tag">
+        <span>PHP keresőből kiszedet név</span>
+    </div>
+    <div class="find-search">
+        <span>Keresési találat</span>
+        <span>DB</span>
+        <span id="float">ComboBox Select</span>
+        <span id="float">Rendezés:</span>
+        
+    </div>
+        <div class="items">
+
+            <div class="item">
+              <div class="image" style="background-image: url('https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg');"></div>
+              <div class="name">Alaplap</div>
+              <div class="price">22 000 Ft.</div>
+              <div class="cart"><button>Kosárba</button></div>
+            </div>
+          
+            <div class="item">
+              <div class="image"><img src="https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg" /></div>
+              <div class="name">Alaplap</div>
+              <div class="price">22 000 Ft.</div>
+              <div class="cart"><button>Kosárba</button></div>
+            </div>
+          
+            <div class="item">
+              <div class="image" style="background-image: url('https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg');"></div>
+              <div class="name">RAM</div>
+              <div class="price">24 000 Ft.</div>
+              <div class="cart"><button>Kosárba</button></div>
+            </div>
+          
+            <div class="item">
+              <div class="image"><img src="https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg" /></div>
+              <div class="name">RAM</div>
+              <div class="price">24 000 Ft.</div>
+              <div class="cart"><button>Kosárba</button></div>
+            </div>
+
+
+            <div class="item">
+                <div class="image" style="background-image: url('https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg');"></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg" /></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image" style="background-image: url('https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg');"></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg" /></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+
+
+
+              <div class="item">
+                <div class="image" style="background-image: url('https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg');"></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg" /></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image" style="background-image: url('https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg');"></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg" /></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+
+
+
+              <div class="item">
+                <div class="image" style="background-image: url('https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg');"></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://p1.akcdn.net/full/472321379.asus-ex-a320m-gaming.jpg" /></div>
+                <div class="name">Alaplap</div>
+                <div class="price">22 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image" style="background-image: url('https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg');"></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+            
+              <div class="item">
+                <div class="image"><img src="https://www.gamingscan.com/wp-content/uploads/2017/11/best-ram.jpg" /></div>
+                <div class="name">RAM</div>
+                <div class="price">24 000 Ft.</div>
+                <div class="cart"><button>Kosárba</button></div>
+              </div>
+          
+          </div>
+
+
+    
+
+  </main>
+
+  <aside>
+   <div class="filter_header">
+       Szűrő
+   </div>
+   <div class="filter_body">
+    Body
+   </div>
+  </aside>
+
+  <footer>
+        <ul>
+          <li><i class="fa fa-facebook"> </i></li>
+          <li><i class="fa fa-twitter"> </i></li>
+          <li><i class="fa fa-google-plus"> </i></li>
+          <li><i class="fa fa-youtube"> </i></li>
+        </ul>
+        <p>© 2020 Copyright: Designed by Gellért Horváth</p>
+  </footer>
+</div>
+    
+</body>
+</html>
